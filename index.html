@@ -1,400 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<style>/* General Page Styling */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grey Theorem | About</title>
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: "Aptos", Arial, sans-serif;
-  font-size: 12px;
-  display: flex;
-  height: 100vh;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: Aptos, Arial, sans-serif;
+    font-size: 12px;
+    min-height: 100vh;
+    display: flex;
 }
 
-/* Left Menu Panel */
+/* =========================
+   SIDEBAR
+========================= */
+
 .sidebar {
-  width: 20%;
-  background-color: #111;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 20%;
+    min-width: 250px;
+    background: #111;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo {
-  width: 250px;
-  height: auto;
-  margin-bottom: 30px;
-}
-.logo2 {
-  width: 250px;
-  height: auto;
-  margin-bottom: 30px;
-  text-align: center;
-  
-}/* =========================================================
-   GLOBAL STYLING
-   ========================================================= */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: "Aptos", Arial, sans-serif;
-  font-size: 12px;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: row; /* Desktop default */
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
 }
 
-/* =========================================================
-   SIDEBAR (LEFT MENU)
-   ========================================================= */
-.sidebar {
-  width: 20%;
-  background-color: #111;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo,
-.logo2 {
-  width: 250px;
-  height: auto;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* =========================================================
-   MENU LINKS
-   ========================================================= */
 .menu {
-  width: 100%;
+    width: 100%;
 }
 
 .menu a,
-.menu a2 {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  font-family: "Constantia", serif;
-  font-size: 16px;
-  padding: 10px 0;
-  transition: color 0.3s ease;
+.menu-header {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-family: Constantia, serif;
+    font-size: 16px;
+    padding: 10px 0;
 }
 
 .menu a:hover {
-  color: #ffcc00;
+    color: #ffcc00;
 }
 
-/* Submenu */
 .submenu {
-  padding-left: 15px;
-  margin-top: 5px;
+    padding-left: 15px;
 }
 
 .submenu a {
-  font-size: 14px;
-  color: #ccc;
+    font-size: 14px;
+    color: #ccc;
 }
 
 .submenu a:hover {
-  color: #ffcc00;
+    color: #ffcc00;
 }
 
-/* =========================================================
-   CONTENT AREA (RIGHT SIDE)
-   ========================================================= */
+/* =========================
+   CONTENT
+========================= */
+
 .content {
-  width: 80%;
-  max-width: 80%;
-  margin-right: 10%;
-  margin-top: 3%;
-  padding: 30px;
-  box-sizing: border-box;
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
-.content h1 {
-  font-family: "Constantia", serif;
-  font-size: 16px;
-  margin-bottom: 15px;
-}
+/* =========================
+   ABOUT SECTION
+========================= */
 
-.content p {
-  font-family: "Aptos", Arial, sans-serif;
-  font-size: 12px;
-  line-height: 1.5;
-  margin-left: 40px;
-}
-
-.content p2 {
-  font-family: "Aptos", Arial, sans-serif;
-  font-size: 10px;
-  line-height: 1.5;
-  margin-left: 40px;
-  text-indent: 40px;
-}
-
-/* =========================================================
-   RESPONSIVE DESIGN
-   ========================================================= */
-
-/* --- Small screens (tablets, large phones) --- */
-@media (max-width: 1024px) {
-  body {
-    flex-direction: column; /* Stack sidebar on top */
-  }
-
-  .sidebar {
-    width: 100%;
-    padding: 15px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* Logo smaller on tablets */
-  .logo, .logo2 {
-    width: 180px;
-    margin-bottom: 0;
-  }
-
-  /* Menu switches to horizontal layout */
-  .menu {
+.about-section {
     display: flex;
+    gap: 40px;
+    align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
+    margin-bottom: 40px;
+}
 
-  .menu a,
-  .menu a2 {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
 
-  /* Content area full width */
-  .content {
-    width: 100%;
-    max-width: 100%;
+.about-text p {
     margin: 0;
-    padding: 20px;
-  }
-
-  .content p {
-    margin-left: 20px;
-  }
-}
-
-/* --- Extra small screens (phones under 600px) --- */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-
-  .sidebar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo,
-  .logo2 {
-    width: 140px;
-    margin-bottom: 10px;
-  }
-
-  /* Menu stacks vertically on phones */
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .menu a,
-  .menu a2 {
-    font-size: 14px;
-    padding: 8px 0;
-    width: 100%;
-  }
-
-  /* Content padding reduced for small screens */
-  .content {
-    padding: 15px;
-  }
-
-  .content p,
-  .content p2 {
-    margin-left: 10px;
+    line-height: 1.8;
     font-size: 13px;
-  }
 }
 
-/* Navigation Links */
-.menu {
-  width: 100%;
+.about-text strong {
+    font-weight: 700;
 }
 
-.menu a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  font-family: "Constantia", serif;
-  font-size: 16px;
-  padding: 10px 0;
-  transition: color 0.3s ease;
+/* =========================
+   BROCHURE
+========================= */
+
+.brochure-card {
+    width: 260px;
+    border: 1px solid #fff;
+    padding: 15px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
-.menu a:hover {
-  color: #ffcc00;
+.brochure-card a {
+    color: #fff;
+    text-decoration: none;
 }
 
-/* Custom tag <a2> for non-clickable headers */
-.menu a2 {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  font-family: "Constantia", serif;
-  font-size: 16px;
-  padding: 10px 0;
-  transition: color 0.3s ease;
+.brochure-card img {
+    width: 100%;
+    display: block;
 }
 
-/* Subheader Menu Styling */
-.submenu {
-  padding-left: 15px;
-  margin-top: 5px;
+.brochure-card-title {
+    font-family: Constantia, serif;
+    font-size: 20px;
+    margin-top: 12px;
 }
 
-.submenu a {
-  font-size: 14px;
-  color: #ccc;
+/* =========================
+   CORE VALUES IMAGE
+========================= */
+
+.hero-image {
+    width: 60%;
+    display: block;
+    margin: 40px auto;
 }
 
-.submenu a:hover {
-  color: #ffcc00;
-}
+/* =========================
+   CALENDAR
+========================= */
 
-/* Right Content Area */
-.content {
-  width: 80%;
-  max-width: 80%;
-  margin-right: 10%; 
-  margin-top:3%;
-  padding: 30px;
-  box-sizing: border-box;
-}
-
-.content h1 {
-  font-family: "Constantia", serif;
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-
-.content p {
-  font-family: "Aptos", Arial, sans-serif;
-  font-size: 12px;
-  line-height: 1.5;
-  margin-left: 40px;
-}
-.content p2 {
-  font-family: "Aptos", Arial, sans-serif;
-  font-size: 10px;
-  line-height: 1.5;
-  margin-left: 40px;
-text-indent: 40px;
-
-
-}</style>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grey Theorem Home</title>
-	<!-- Link external CSS file -->
-  <link rel="stylesheet" href="styles.css">
- 
-</head>
-<body>
-  <!-- Left Sidebar -->
-  <div class="sidebar">
-    <!-- Logo -->
-
-      <img src="images/gtlogo1.png" alt="Logo" class="logo">
-
-    <!-- Navigation Menu -->
-    <nav class="menu">
-      <a style="color: #ffcc00;" href="About.html">About</a>
-      
-      <div>
-        <a2>Services</a2>
-        <div class="submenu">
-          <strong><a href="Market_Research.html">Market Research</a></strong>
-          <strong><a href="Economics.html">Economics</a></strong>
-          <strong><a href="Life_Sciences.html">Life Sciences</a></strong>
-          <strong><a href="Internal_Technologies.html">Internal Technologies</a></strong>
-        </div>
-      </div>
-      
-      <a href="Whitepapers.html">Whitepapers</a>
-      <a href="Contact.html">Contact</a>
-    </nav>
-  </div>
-
-  <!-- Right Content Area -->
-  <div class="content">
-    <h1><strong></h1></strong>
-    <p>
-      Grey Theorem is an independent market research, economics and life sciences advisory firm built upon the logical principles of Grey Systems Theory. Framing every system as a mix of complete knowns, partial knowns, and complete unknowns; all projects are designed and practiced with exploratory questions, robust mathematics, and descriptive framing for deliverables. 
-<br>
-<br>
-Grey Theorem is owned and operated by Josef Grey, an experienced and awarded inventor, economist, and scientist. Equipped with two decades of successes and informative failures across the Life Sciences vertical, Josef has made advances across disease modeling, assay development, drug discovery, preclinical development, market entry/access, and market research-side services. Historical economics research has focused on modeling developing nation growth, particularly South America. Current academic interests lie in evolution of shadow markets and economies.
-<br>
-<br>
-The three core values of Grey Theorem are Science, Integrity, and Discipline. Combining mission-priority with creative investigative methods, Grey Theorem prides itself on operating with absolute discretion, privacy, and respect. Professional integrity and reputation is paramount in the age of deepfakes, client double-dipping, and increased distrust in government reporting. As confusion and volatility increase, it’s time for a return to method, it’s time for Grey Theorem.
-<br>
-    </p>
-	<center><img style="width: 90%;" src="images/aboutimg1.png" alt="Grey Theorem Core Values" class="logo2"></center>
-	<div style="display: flex; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
-  <a href="Core/GreyTheoremBrochure.pdf" download 
-     style="text-decoration: none; text-align: center;">
-    <img src="images/Brochure.png" alt="Grey Theorem Brochure Download" width="200" 
-         style="display: block; margin: 0 auto;">
-    <span style="display: block; font-family: Constantia, serif; font-size: 24px; color: #ffffff; margin-top: 8px;">
-       Grey Theorem Brochure
-    </span>
-  </a>
-		 </div>
-	 <div style="
-    border: 1px solid white;
+.calendar-frame {
+    border: 1px solid #fff;
     padding: 20px;
-    margin-top: 30px;
-">
+    margin-top: 20px;
+}
 
-    <h1 style="margin-top:0;">
-        Schedule a Consultation
-    </h1>
+.calendar-frame h1 {
+    font-family: Constantia, serif;
+    font-size: 24px;
+    margin-top: 0;
+}
 
-    <div style="
-        background:#fff;
-        padding:10px;
-    ">
-        <iframe
-            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1jJYlJ6ruGSGye9pQ_q9HmumiAurpkCE7QjnHxBWqd1Lamyz8irFpc8PDkZcbiXko0vR3uvhKN?gv=true"
-            width="100%"
-            height="600"
-            frameborder="0"
-            style="border:none;">
-        </iframe>
+.calendar-wrapper {
+    background: #fff;
+    padding: 10px;
+}
+
+.calendar-wrapper iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1024px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .brochure-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <img src="images/gtlogo1.png"
+             alt="Grey Theorem Logo"
+             class="logo">
+
+        <nav class="menu">
+
+            <a href="About.html" style="color:#ffcc00;">About</a>
+
+            <div class="menu-header">Services</div>
+
+            <div class="submenu">
+                <a href="Market_Research.html">Market Research</a>
+                <a href="Economics.html">Economics</a>
+                <a href="Life_Sciences.html">Life Sciences</a>
+                <a href="Internal_Technologies.html">Internal Technologies</a>
+            </div>
+
+            <a href="Whitepapers.html">Whitepapers</a>
+            <a href="Contact.html">Contact</a>
+
+        </nav>
+
     </div>
 
-</div>
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <!-- ABOUT + BROCHURE -->
+
+        <div class="about-section">
+
+            <div class="about-text">
+
+                <p>
+  <br><br>  <br><br>
+                    <strong>Grey Theorem</strong> is founded on the principle that mathematics and logic-driven thinking produces a measurable strategic advantage. Integrating quantitative rigor, qualitative analysis, and scientific reasoning, our firm develops tailored frameworks for understanding complex systems — from economic environments and commercial markets to emerging biotech and translational research. 
+
+
+                    <br><br>
+
+                    Founder and head consultant <b>Josef Grey’s</b> work reflects an interdisciplinary philosophy: that economics, biology, and human behavior are interconnected systems that can be modeled and translated for clearer decision-making.  Grey Theorem supports clientele including marketing and sales teams, private investors, biotech startups, executives, and government agencies through engagements such as macroeconomic interpretation, forecasting, strategic market analysis, competitive intelligence, and scientific due diligence. 
+
+       <br><br>
+                    
+                    In a landscape increasingly filled with noise, automation, and fragmentation, Grey Theorem focuses on structured insights, analytical discipline, and human-first advisory relationships.
+
+
+               
+
+                </p>
+
+            </div>
+
+            <div class="brochure-card">
+
+                <a href="Core/GreyTheoremOverview.pdf" download>
+
+                    <img src="images/GreyTheoremOverview.png"
+                         alt="Grey Theorem Brochure">
+
+                    <div class="brochure-card-title">
+                        Download Brochure
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CORE VALUES IMAGE -->
+
+        <img src="images/aboutimg1.png"
+             alt="Grey Theorem Core Values"
+             class="hero-image">
+
+        <!-- CALENDAR -->
+
+        <div class="calendar-frame">
+
+            <h1>Schedule a Consultation</h1>
+
+            <div class="calendar-wrapper">
+
+                <iframe
+                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1jJYlJ6ruGSGye9pQ_q9HmumiAurpkCE7QjnHxBWqd1Lamyz8irFpc8PDkZcbiXko0vR3uvhKN?gv=true">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 </html>
-
-
-
