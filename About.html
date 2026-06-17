@@ -96,27 +96,6 @@ body {
     margin: 40px auto;
 }
 
-.download-section {
-    margin: 30px 0;
-}
-
-.download-section a {
-    text-decoration: none;
-    text-align: center;
-    color: white;
-}
-
-.download-section img {
-    width: 200px;
-}
-
-.download-section span {
-    display: block;
-    font-family: Constantia, serif;
-    font-size: 24px;
-    margin-top: 8px;
-}
-
 /* =========================================================
    CALENDAR
 ========================================================= */
@@ -179,119 +158,94 @@ body {
 
 <div class="sidebar">
 
-    <img src="images/gtlogo1.png" alt="Grey Theorem Logo" class="logo">
+<div class="content">
 
-    <nav class="menu">
-
-        <a href="About.html" style="color:#ffcc00;">About</a>
-
-        <div class="menu-header">Services</div>
-
-        <div class="submenu">
-            <a href="Market_Research.html">Market Research</a>
-            <a href="Economics.html">Economics</a>
-            <a href="Life_Sciences.html">Life Sciences</a>
-            <a href="Internal_Technologies.html">Internal Technologies</a>
-        </div>
-
-        <a href="Whitepapers.html">Whitepapers</a>
-        <a href="Contact.html">Contact</a>
-
-    </nav>
-
-</div>
-<div style="
-    display:flex;
-    gap:40px;
-    align-items:flex-start;
-    margin-bottom:40px;
-    flex-wrap:wrap;
-">
-
-    <!-- LEFT COLUMN -->
-    <div style="flex:1; min-width:300px;">
-
-        <p style="
-            margin:0;
-            line-height:1.8;
-            font-size:13px;
-        ">
-
-            <strong>Grey Theorem</strong> is an independent market research,
-            economics and life sciences advisory firm built upon the logical
-            principles of <strong>Grey Systems Theory</strong>. Framing every
-            system as a mix of complete knowns, partial knowns, and complete
-            unknowns, all projects are designed and practiced with exploratory
-            questions, robust mathematics, and descriptive framing for
-            deliverables.
-
-            <br><br>
-
-            Grey Theorem is owned and operated by
-            <strong>Josef Grey</strong>, an experienced and awarded inventor,
-            economist, and scientist. Equipped with
-            <strong>two decades of successes and informative failures</strong>
-            across the Life Sciences vertical, Josef has made advances across
-            disease modeling, assay development, drug discovery, preclinical
-            development, market entry/access, and market research-side services.
-
-            <br><br>
-
-            The three core values of Grey Theorem are
-            <strong>Science</strong>,
-            <strong>Integrity</strong>, and
-            <strong>Discipline</strong>.
-
-            Combining mission-priority with creative investigative methods,
-            Grey Theorem prides itself on operating with absolute discretion,
-            privacy, and respect.
-
-            <br><br>
-
-            Professional integrity and reputation are paramount in the age of
-            deepfakes, client double-dipping, and increased distrust in
-            government reporting. As confusion and volatility increase,
-            <strong>it's time for a return to method.</strong>
-        </p>
-
-    </div>
-
-    <!-- RIGHT COLUMN -->
+    <!-- ABOUT + BROCHURE -->
     <div style="
-        width:260px;
-        border:1px solid white;
-        padding:15px;
-        text-align:center;
-        flex-shrink:0;
+        display:flex;
+        gap:40px;
+        align-items:flex-start;
+        margin-bottom:40px;
+        flex-wrap:wrap;
     ">
 
-        <a href="Core/GreyTheoremBrochure.pdf"
-           download
-           style="text-decoration:none; color:white;">
+        <div style="flex:1; min-width:300px;">
 
-            <img
-                src="images/Brochure.png"
-                alt="Grey Theorem Brochure"
-                style="
-                    width:100%;
-                    display:block;
+            <p style="margin:0; line-height:1.8; font-size:13px;">
+
+                <strong>Grey Theorem</strong> is an independent market research,
+                economics and life sciences advisory firm built upon the logical
+                principles of <strong>Grey Systems Theory</strong>. Framing every
+                system as a mix of complete knowns, partial knowns, and complete
+                unknowns, all projects are designed and practiced with exploratory
+                questions, robust mathematics, and descriptive framing for
+                deliverables.
+
+                <br><br>
+
+                Grey Theorem is owned and operated by
+                <strong>Josef Grey</strong>, an experienced and awarded inventor,
+                economist, and scientist. Equipped with
+                <strong>two decades of successes and informative failures</strong>
+                across the Life Sciences vertical, Josef has made advances across
+                disease modeling, assay development, drug discovery, preclinical
+                development, market entry/access, and market research-side services.
+
+                <br><br>
+
+                The three core values of Grey Theorem are
+                <strong>Science</strong>,
+                <strong>Integrity</strong>,
+                and <strong>Discipline</strong>.
+
+                Combining mission-priority with creative investigative methods,
+                Grey Theorem prides itself on operating with absolute discretion,
+                privacy, and respect.
+
+                <br><br>
+
+                Professional integrity and reputation are paramount in the age of
+                deepfakes, client double-dipping, and increased distrust in
+                government reporting. As confusion and volatility increase,
+                <strong>it's time for a return to method.</strong>
+
+            </p>
+
+        </div>
+
+        <!-- BROCHURE -->
+        <div style="
+            width:260px;
+            border:1px solid white;
+            padding:15px;
+            text-align:center;
+            flex-shrink:0;
+        ">
+
+            <a href="Core/GreyTheoremBrochure.pdf"
+               download
+               style="text-decoration:none; color:white;">
+
+                <img
+                    src="images/Brochure.png"
+                    alt="Grey Theorem Brochure"
+                    style="width:100%; display:block;">
+
+                <div style="
+                    font-family:Constantia, serif;
+                    font-size:20px;
+                    margin-top:12px;
                 ">
+                    Download Brochure
+                </div>
 
-            <div style="
-                font-family:Constantia, serif;
-                font-size:20px;
-                margin-top:12px;
-            ">
-                Download Brochure
-            </div>
+            </a>
 
-        </a>
+        </div>
 
     </div>
 
-</div>
-
-<center>
+    <!-- CORE VALUES IMAGE -->
     <img
         src="images/aboutimg1.png"
         alt="Grey Theorem Core Values"
@@ -300,11 +254,16 @@ body {
             display:block;
             margin:40px auto;
         ">
-</center>
 
+    <!-- CALENDAR -->
     <div class="calendar-frame">
 
-        <h1>Schedule a Consultation</h1>
+        <h1 style="
+            font-family:Constantia, serif;
+            margin-top:0;
+        ">
+            Schedule a Consultation
+        </h1>
 
         <div class="calendar-wrapper">
 
@@ -317,6 +276,3 @@ body {
     </div>
 
 </div>
-
-</body>
-</html>
