@@ -1,241 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grey Theorem | About</title>
-
-<style>
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-body {
-    margin: 0;
-    background: #000;
-    color: #fff;
-    font-family: Aptos, Arial, sans-serif;
-    font-size: 12px;
+.about-section {
     display: flex;
-    min-height: 100vh;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
-/* =========================================================
-   SIDEBAR
-========================================================= */
-
-.sidebar {
-    width: 20%;
-    background: #111;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo {
-    width: 250px;
-    height: auto;
-    margin-bottom: 30px;
-}
-
-.menu {
-    width: 100%;
-}
-
-.menu a,
-.menu-header {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-family: Constantia, serif;
-    font-size: 16px;
-    padding: 10px 0;
-}
-
-.menu a:hover {
-    color: #ffcc00;
-}
-
-.menu-header {
-    cursor: default;
-}
-
-.submenu {
-    padding-left: 15px;
-}
-
-.submenu a {
-    font-size: 14px;
-    color: #ccc;
-}
-
-.submenu a:hover {
-    color: #ffcc00;
-}
-
-/* =========================================================
-   CONTENT
-========================================================= */
-
-.content {
+.about-text {
     flex: 1;
-    padding: 40px;
-    box-sizing: border-box;
 }
 
-.content p {
-    line-height: 1.6;
-    margin-left: 40px;
+.about-text p {
+    line-height: 1.7;
+    margin: 0;
+    font-size: 13px;
 }
 
-.hero-image {
-    width: 90%;
-    display: block;
-    margin: 40px auto;
+.about-text strong {
+    color: #ffffff;
+    font-weight: 700;
 }
 
-.download-section {
-    margin: 30px 0;
-}
-
-.download-section a {
-    text-decoration: none;
+.brochure-card {
+    width: 260px;
+    flex-shrink: 0;
+    border: 1px solid #ffffff;
+    padding: 15px;
     text-align: center;
+}
+
+.brochure-card a {
+    text-decoration: none;
     color: white;
 }
 
-.download-section img {
-    width: 200px;
-}
-
-.download-section span {
-    display: block;
-    font-family: Constantia, serif;
-    font-size: 24px;
-    margin-top: 8px;
-}
-
-/* =========================================================
-   CALENDAR
-========================================================= */
-
-.calendar-frame {
-    border: 1px solid white;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.calendar-wrapper {
-    background: white;
-    padding: 10px;
-}
-
-.calendar-wrapper iframe {
+.brochure-card img {
     width: 100%;
-    height: 600px;
-    border: none;
+    height: auto;
+    display: block;
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+.brochure-card span {
+    display: block;
+    margin-top: 12px;
+    font-family: Constantia, serif;
+    font-size: 20px;
+}
 
-@media (max-width: 1024px) {
+.brochure-card:hover {
+    background: rgba(255,255,255,0.05);
+}
 
-    body {
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .about-section {
         flex-direction: column;
     }
 
-    .sidebar {
+    .brochure-card {
         width: 100%;
+        max-width: 300px;
     }
 
-    .content {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .content p {
-        margin-left: 20px;
-    }
 }
+<div class="about-section">
 
-@media (max-width: 600px) {
+    <div class="about-text">
 
-    .logo {
-        width: 150px;
-    }
+        <p>
+            <strong>Grey Theorem</strong> is an independent market research, economics, and life sciences advisory firm built upon the logical principles of <strong>Grey Systems Theory</strong>. Framing every system as a mix of complete knowns, partial knowns, and complete unknowns, all projects are designed and practiced with exploratory questions, robust mathematics, and descriptive framing for deliverables.
+            <br><br>
 
-    .content p {
-        margin-left: 10px;
-    }
-}
-</style>
-</head>
+            Grey Theorem is owned and operated by <strong>Josef Grey</strong>, an experienced and awarded inventor, economist, and scientist. Equipped with <strong>two decades of successes and informative failures</strong> across the Life Sciences vertical, Josef has made advances across disease modeling, assay development, drug discovery, preclinical development, market entry/access, and market research-side services. Historical economics research has focused on modeling developing nation growth, particularly South America. Current academic interests lie in the evolution of shadow markets and economies.
+            <br><br>
 
-<body>
+            The three core values of Grey Theorem are <strong>Science</strong>, <strong>Integrity</strong>, and <strong>Discipline</strong>. Combining mission-priority with creative investigative methods, Grey Theorem prides itself on operating with absolute discretion, privacy, and respect. Professional integrity and reputation are paramount in the age of deepfakes, client double-dipping, and increased distrust in government reporting. As confusion and volatility increase, <strong>it's time for a return to method.</strong>
+        </p>
 
-<div class="sidebar">
+    </div>
 
-    <img src="images/gtlogo1.png" alt="Grey Theorem Logo" class="logo">
+    <div class="brochure-card">
 
-    <nav class="menu">
-
-        <a href="About.html" style="color:#ffcc00;">About</a>
-
-        <div class="menu-header">Services</div>
-
-        <div class="submenu">
-            <a href="Market_Research.html">Market Research</a>
-            <a href="Economics.html">Economics</a>
-            <a href="Life_Sciences.html">Life Sciences</a>
-            <a href="Internal_Technologies.html">Internal Technologies</a>
-        </div>
-
-        <a href="Whitepapers.html">Whitepapers</a>
-        <a href="Contact.html">Contact</a>
-
-    </nav>
-
-</div>
-
-<div class="content">
-
-    <p>
-Grey Theorem is founded on the principle that mathematics and logic-driven thinking produces a measurable strategic advantage. Integrating quantitative rigor, qualitative analysis, and scientific reasoning, our firm develops tailored frameworks for understanding complex systems — from economic environments and commercial markets to emerging biotech and translational research. 
-        <br><br>
-
-Founder and head consultant Josef Grey’s work reflects an interdisciplinary philosophy: that economics, biology, and human behavior are interconnected systems that can be modeled and translated for clearer decision-making.  Grey Theorem supports clientele including marketing and sales teams, private investors, biotech startups, executives, and government agencies through engagements such as macroeconomic interpretation, forecasting, strategic market analysis, competitive intelligence, and scientific due diligence. 
-        <br><br>
-
-In a landscape increasingly filled with noise, automation, and fragmentation, Grey Theorem focuses on structured insights, analytical discipline, and human-first advisory relationships.
-    </p>
-
-    <div class="download-section">
         <a href="Core/GreyTheoremBrochure.pdf" download>
             <img src="images/Brochure.png"
                  alt="Grey Theorem Brochure">
-            <span>Grey Theorem Brochure</span>
+
+            <span>Download Brochure</span>
         </a>
-    </div>
-
-    <div class="calendar-frame">
-
-        <h1>Schedule a Consultation</h1>
-
-        <div class="calendar-wrapper">
-
-            <iframe
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1jJYlJ6ruGSGye9pQ_q9HmumiAurpkCE7QjnHxBWqd1Lamyz8irFpc8PDkZcbiXko0vR3uvhKN?gv=true">
-            </iframe>
-
-        </div>
 
     </div>
 
 </div>
-
-</body>
-</html>
