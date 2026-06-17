@@ -1,3 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grey Theorem | About</title>
+
+<style>
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: Aptos, Arial, sans-serif;
+    font-size: 12px;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 20%;
+    background: #111;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu a,
+.menu-header {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-family: Constantia, serif;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+}
+
+.menu-header {
+    cursor: default;
+}
+
+.submenu {
+    padding-left: 15px;
+}
+
+.submenu a {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.submenu a:hover {
+    color: #ffcc00;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-left: 40px;
+}
+
+.hero-image {
+    width: 90%;
+    display: block;
+    margin: 40px auto;
+}
+
+.download-section {
+    margin: 30px 0;
+}
+
+.download-section a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.download-section img {
+    width: 200px;
+}
+
+.download-section span {
+    display: block;
+    font-family: Constantia, serif;
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   CALENDAR
+========================================================= */
+
+.calendar-frame {
+    border: 1px solid white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.calendar-wrapper {
+    background: white;
+    padding: 10px;
+}
+
+.calendar-wrapper iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .content p {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .logo {
+        width: 150px;
+    }
+
+    .content p {
+        margin-left: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <img src="images/gtlogo1.png" alt="Grey Theorem Logo" class="logo">
+
+    <nav class="menu">
+
+        <a href="About.html" style="color:#ffcc00;">About</a>
+
+        <div class="menu-header">Services</div>
+
+        <div class="submenu">
+            <a href="Market_Research.html">Market Research</a>
+            <a href="Economics.html">Economics</a>
+            <a href="Life_Sciences.html">Life Sciences</a>
+            <a href="Internal_Technologies.html">Internal Technologies</a>
+        </div>
+
+        <a href="Whitepapers.html">Whitepapers</a>
+        <a href="Contact.html">Contact</a>
+
+    </nav>
+
+</div>
 <div style="
     display:flex;
     gap:40px;
@@ -99,3 +301,22 @@
             margin:40px auto;
         ">
 </center>
+
+    <div class="calendar-frame">
+
+        <h1>Schedule a Consultation</h1>
+
+        <div class="calendar-wrapper">
+
+            <iframe
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1jJYlJ6ruGSGye9pQ_q9HmumiAurpkCE7QjnHxBWqd1Lamyz8irFpc8PDkZcbiXko0vR3uvhKN?gv=true">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
